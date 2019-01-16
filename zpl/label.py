@@ -92,7 +92,7 @@ class Label:
         image = PIL.ImageOps.invert(image.convert('L')).convert('1')
 
         if compression_type == "A":
-            return image.tobytes().encode('hex').upper()
+            return image.tobytes().hex().upper()
         # TODO this is not working
         #elif compression_type == "B":
         #    return image.tostring()
